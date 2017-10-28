@@ -1,0 +1,60 @@
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+body{font:12px'Microsoft Yahei',"Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;}
+a{color:#2d374b;text-decoration:none}
+a:hover{color:#cd0200;text-decoration:underline}
+em{font-style:normal}
+li{list-style:none}
+img{border:0;}
+table{border-collapse:collapse;border-spacing:0}
+p{word-wrap:break-word}
+
+
+
+
+body{
+    padding: 20px;
+}
+
+
+.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
+.clearfix { *zoom:1; }
+
+
+.main-content{
+    width:calc(100% - 40px) ;
+    background-color: #eee;
+    padding: 20px;
+    border: 1px #999 solid;
+}
+.main-left{
+    display: inline-block;
+    float: left;
+    width: 200px;
+    margin-right: 20px;
+    background-color: white;
+    border: 1px #999 solid;
+}
+.main-center{
+    display: inline-block;
+    float: left;
+    width: calc(100% - 450px);
+    background-color: white;
+    border: 1px #999 solid;
+    padding: 20px;
+    font-size: 25px;
+    line-height: 40px;
+
+}
+.main-img{
+    width: 80px;
+    height: 80px;
+    padding: 20px;
+}
+.main-right{
+    display: inline-block;
+    float: right;
+    width: 120px;
+    padding: 20px;
+    background-color: white;
+    border: 1px #999 solid;
+}

@@ -1,0 +1,47 @@
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+body{font:12px'Microsoft Yahei',"Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;}
+a{color:#2d374b;text-decoration:none}
+a:hover{color:#cd0200;text-decoration:underline}
+em{font-style:normal}
+li{list-style:none}
+img{border:0;}
+table{border-collapse:collapse;border-spacing:0}
+p{word-wrap:break-word}
+
+.main-parent{
+    /*position: relative;
+    height:800px ;*/
+}
+
+.main-content{
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    background-color: #ccc;
+    left: 50%;
+    top: 50%;
+    /*top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;*/
+    overflow: hidden;
+    margin-top: -100px;
+    margin-left: -200px;
+}
+.main-span{
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: #fc0;
+}
+.main-span-up{
+    left: -50px;
+    top: -50px;
+}
+.main-span-down{
+    float: right;
+    right: -50px;
+    bottom: -50px;
+}
