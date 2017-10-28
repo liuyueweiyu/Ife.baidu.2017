@@ -9,7 +9,7 @@ table{border-collapse:collapse;border-spacing:0}
 p{word-wrap:break-word}
 
 
-.main-content{
+.main-container{
     width: 980px;
     height: 1386px;
     margin: 0 auto;
@@ -91,15 +91,7 @@ p{word-wrap:break-word}
     background-color: #cc8091;
 }
 .banner-title{
-
-    /*border-bottom: 2px #333333 solid;*/
-}
-.banner-title-big{
-    font-size: 26px;
-}
-.banner-title-line{
     display: inline-block;
-    float: left;
     font-size: 24px;
     line-height: 40px;
     font-family: "Microsoft YaHei UI";
@@ -107,6 +99,312 @@ p{word-wrap:break-word}
     /*height: 2px;*/
     /*background-color:#333333 ;*/
 }
-.banner-title-line-big{
+.banner-second-title{
+    display: block;
+    margin-top: 7px;
+    width: 197px;
+    /*word-wrap:break-word;*/
+    /*word-break: break-all;*/
+    font-size: 12px;
+    line-height: 10px;
+    color: #676767;
+    font-family: 楷体;
+}
+.banner-big-number{
+    color: #75b86b;
+    font-size: 100px;
+    font-style: oblique;
+}
+.banner-last{
+    color: #cc8091;
+    font-family: "Microsoft YaHei UI";
+}
+.banner-small-number{
+    display: inline-block;
+    font-size: 55px;
+}
+.main-banner-small{
+    display: inline-block;
+}
+.banner-small-top{
+    font-size: 21px;
+}
+.banner-small-below{
+    font-size: 12px;
+    color:#676767;
+}
+/*============目录=============*/
+.main-catalog{
+    /*position: relative;*/
+    width: 890px;
+    margin: 0 auto;
+}
+.catalog-module{
+    display: inline-block;
+    /*position: absolute;*/
+    margin-right: 27px;
+    /*top: 0;*/
+}
+.catalog-title{
+    margin-bottom: 11px;
+    font-size: 16px;
+    font-family: "Microsoft YaHei UI";
+    text-decoration: underline;
+    font-weight: bold;
+}
+.catalog-title-green{
+    color: #418c59;
+}
+.catalog-title-red{
+    color: #cc7680;
+}
+.catalog-title-yellow{
+    color: #d2994f;
+}
+.catalog-content{
+    width: 197px;
+    font-size: 12px;
+    color: #231815;
+    font-family:"Microsoft YaHei UI";
+    line-height:16px;
+    opacity: 0.7;
+}
+.catalog-piece {
+    margin-top: 80px;
+}
 
+/*============文章=============*/
+.main-content{
+    width: 890px;
+    margin: 0 auto;
+    margin-top: 47px;
+}
+.main-content-left{ /* 左边元素 */
+    display: inline-block;
+    width: 415px;
+}
+.main-content-left-title{
+    font-size: 72px;
+    color: #f5e327;
+    font-weight:bold;
+    font-style: oblique;
+    font-family: 黑体;
+    line-height: 33px;
+}
+.main-content-left-title-small{
+    display: inline;
+    color: #11456b;
+    font-size: 42px;
+    /*line-height: 16px;*/
+    font-style: normal;
+    font-weight: normal;
+}
+.main-content-left-title-other{
+    margin-top: 13px;
+    margin-bottom: 18px;
+    color: #11456b;
+    font-size: 33px;
+    font-style: normal;
+
+}
+.main-banner-left-line{
+    background-color: #11456b;
+    height: 2px;
+    width: 415px;
+}
+.main-banner-left-text{
+    position: relative;
+    padding-top: 25px;
+}
+.main-banner-left-first{
+    float: left;
+    margin-right: 8px;
+    font-size: 70px;
+    font-family: "Microsoft YaHei UI";
+    color: #f5e327;
+}
+.main-banner-left-other{
+    font-size: 12px;
+    font-family: 宋体;
+    color: #767777;
+    line-height: 16px;
+}
+.main-banner-left-text-img{
+    float: right;
+    height: 288px;
+    width: 167px;
+    margin: 8px;
+}
+.main-content-right{    /* 右边元素 */
+    display: inline-block;
+    float: right;
+    /*margin-bottom: 30px;*/
+}
+.main-banner-right-back{
+    position: relative;
+    background: url("../images/text-right.png");
+    width: 458px;
+    height: 257px;
+
+}
+.main-banner-right-hover{
+    position: absolute;
+    background:url("../images/text-right-hover.png");
+    height: 60px;
+    width: 458px;
+    bottom: 0;
+}
+.main-banner-right-line{
+    float: left;
+    margin-left: 38px ;
+    margin-top: 8px;
+    width: 3px;
+    height: 44px;
+    background-color: #72b16a;
+}
+.main-banner-right-font {
+    float: left;
+    font-size: 26px;
+    color: white;
+    font-family: "Microsoft YaHei UI";
+    font-weight: normal;
+    margin-top: 12px;
+    margin-left: 12px;
+    margin-right: 10px;
+}
+.main-banner-right-end{
+    float: left;
+    font-size: 12px;
+    color: #72b16a;
+    font-family: "Microsoft YaHei UI";
+    font-weight: normal;
+    font-style: oblique;
+    margin-top: 28px;
+    /*letter-spacing: 140%;*/
+}
+
+.main-content-right-content{
+    position: relative;
+    margin-top: 30px;
+    width: 458px;
+    height: 381px;
+    background-color: #eeedd6;
+    padding-top: 31px;
+}
+
+.main-content-right-catalog{
+    width: 414px;
+    margin: 0 auto;
+}
+.trangle{
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 6px solid #231815;
+    position: absolute;
+    top:50%;
+    margin-top: -3px;
+}
+.main-content-right-piece{
+    position: relative;
+    height: 30px;
+    margin-bottom: 31px;
+}
+.main-content-right-font{
+    font-size: 16px;
+    color: #5a5b5b;
+    line-height: 20px;
+    font-family: 宋体;
+    text-align: left;
+    margin-left: 14px;
+    display: inline-block;
+    margin-top: 5px;
+}
+.main-content-right-end{
+
+    display: inline;
+    font-size: 12px;
+    color: #5a5b5b;
+    line-height: 20px;
+    font-family: 宋体;
+    text-align: right;
+    font-style: oblique;
+}
+.main-content-right-final{
+
+}
+.main-content-right-left{
+    position: absolute;
+    bottom: 0 ;
+    background: url("../images/right-below-red.png");
+    height: 160px;
+    width: 260px;
+}
+.main-content-right-right{
+    position: absolute;
+    bottom: 37px ;
+    left: 260px ;
+    height: 123px;
+    width: 178px ;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.main-content-right-zero{
+    float: left;
+    display: inline-block;
+    margin: 7px 0 5px 15px;
+    font-size: 110px;
+    color: white;
+}
+.main-banner-below-line{
+    float: left;
+    display: inline-block;
+    margin-top: 37px;
+    width: 2px;
+    height: 86px;
+    background-color: white;
+}
+.main-banner-below-div{
+    display: inline-block;
+    margin-left: 5px;
+    padding-top: 37px;
+}
+.main-banner-below-number{
+    font-size: 21px;
+    font-style: oblique;
+    font-family: 黑体;
+    line-height: 24px;
+    color: white;
+}
+.main-banner-below-hello{
+    font-size: 12px;
+    font-style: oblique;
+    font-family: 黑体;
+    line-height: 12px;
+    width: 165px;
+    color: white;
+    margin-top: 5px;
+}
+.main-content-right-big{
+    font-size: 72px;
+    font-family: 黑体;
+    color: #d45d5c;
+    margin: -12px 8px 0 0;;
+}
+.main-content-right-big-first{
+    float: left;
+    margin: 0 2px;
+}
+.main-content-right-big-below{
+    float: right;
+    margin: 0 2px;
+}
+.main-content-right-p{
+    margin-top: 50px;
+    /*width: 80px;*/
+    display: inline;
+    font-size: 14px;
+    color: #5a5b5b;
+    line-height: 16px;
+    font-family: 黑体;
+    font-style: oblique;
 }
