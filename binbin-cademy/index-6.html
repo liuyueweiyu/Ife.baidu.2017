@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index-6</title>
+    <style type="text/css">
+        .div-test{
+            margin: 20px;
+        }
+        .div-test a{
+            display: block;
+            width: 200px;
+            margin: 5px;
+            background: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<textarea id="text"></textarea>
+<input id="left-in" type="submit" value="左侧入">
+<input id="right-in" type="submit" value="右侧入">
+<input id="left-out" type="submit" value="左侧出">
+<input id="right-out" type="submit" value="右侧出">
+<input id="search" type="submit" value="查询">
+<div class="div-test">
+
+</div>
+<script type="text/javascript">
+    var $parent = document.getElementsByClassName("div-test")[0];
+    //左侧入
+    document.getElementById("left-in").onclick = function () {
+        var $item = document.createElement("a");
+        $parent.appendChild($item);
+        for(var i = $parent.children.length - 1;i > 0  ; i--){
+            //$parent.children[i] = $parent.children[i-1];
+            $parent.children[i].innerHTML = $parent.children[i-1].innerHTML;
+        }
+        $parent.children[0].innerHTML = document.getElementById("text").value;
+    }
+    //右侧入
+    document.getElementById("right-in").onclick = function () {
+        var $item = document.createElement("a");
+        $item.innerHTML = document.getElementById("text").value;
+        $parent.appendChild($item);
+
+    }
+    //右侧出
+    document.getElementById("right-out").onclick = function () {
+        $parent.removeChild($parent.children[$parent.children.length-1]);
+    }
+    //左侧出
+    document.getElementById("left-out").onclick = function () {
+        $parent.removeChild($parent.children[0]);
+    }
+    //每个a的点击事件
+    //var list  = $parent.children;
+    $parent.addEventListener("click",function (e) {
+        if (event.target.nodeName.toLowerCase() == "a") {
+            $parent.removeChild(event.target);
+        }
+    })
+
+    //查询
+    document.getElementById("search").onclick = function () {
+        var text = document.getElementById("text").value;
+        for(var i = 0;i<$parent.children.length ;i++){
+            if ($parent.children[i].innerText.indexOf(text)>=0){
+               //$parent.children[i].innerText.replace(text,"<span style='color: black'>"+text+"</span>");
+                var reg = new RegExp(text,"g");
+                $parent.children[i].innerHTML = $parent.children[i].innerHTML.replace(reg,"<span style='color: black'>"+text+"</span>");
+            }
+            else{
+                $parent.children[i].style.display = "none";
+            }
+        }
+    }
+
+</script>
+
+</body>
+</html>

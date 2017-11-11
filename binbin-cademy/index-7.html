@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index-7</title>
+    <style type="text/css">
+        div{
+            border: 1px #333 solid;
+            display: inline-block;
+            background: white;
+        }
+        .box-container{
+            display: block;
+            width: 700px;
+            margin: 0 auto;
+            margin-top: 50px;
+            border: none;
+        }
+        .box-1{
+            display: block;
+            margin-bottom: 20px;
+            width: 600px;
+            height: 150px;
+        }
+        .box-2{
+            width: 285px;
+            margin: 5px;
+            height: 138px;
+        }
+        .box-3{
+            width: 128px;
+            margin: 5px;
+            height: 118px;
+        }
+        .box-4{
+            width: 49px;
+            margin: 5px;
+            height: 108px;
+        }
+    </style>
+</head>
+<body>
+    <input type="submit" id="first" value="前序遍历">
+    <input type="submit" id="middle" value="中序遍历">
+    <input type="submit" id="last" value="后序遍历">
+    <div class="box-container">
+        <div class="box-1">
+            <div class="box-2">
+                <div class="box-3">
+                    <div class="box-4">
+                    </div>
+                    <div class="box-4">
+                    </div>
+                </div>
+                <div class="box-3">
+                    <div class="box-4">
+                    </div>
+                    <div class="box-4">
+                    </div>
+                </div>
+            </div>
+            <div class="box-2">
+                <div class="box-3">
+                    <div class="box-4">
+                    </div>
+                    <div class="box-4">
+                    </div>
+                </div>
+                <div class="box-3">
+                    <div class="box-4">
+                    </div>
+                    <div class="box-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-1">
+            <div class="box-2">
+                <div class="box-3">
+                    <div class="box-4">
+                    </div>
+                    <div class="box-4">
+                    </div>
+                </div>
+                <div class="box-3">
+                    <div class="box-4">
+                    </div>
+                    <div class="box-4">
+                    </div>
+                </div>
+            </div>
+            <div class="box-2">
+                <div class="box-3">
+                    <div class="box-4">
+                    </div>
+                    <div class="box-4">
+                    </div>
+                </div>
+                <div class="box-3">
+                    <div class="box-4">
+                    </div>
+                    <div class="box-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var container = document.getElementsByClassName("box-container")[0];
+        //前序遍历
+        document.getElementById("first").onclick = function () {
+            preOrder(container);
+        }
+
+        var counter = 0;
+
+        function preOrder(node) {
+            if (node != null) {
+                counter++;
+                setTimeout(function () {
+                    node.style.background = "black";
+                },counter*500);
+                setTimeout(function () {
+                    node.style.background = "white";
+                },counter*500+500);
+                preOrder(node.children[0]);
+                preOrder(node.children[1]);
+            }
+        }
+
+        //中序遍历
+        document.getElementById("middle").onclick = function () {
+            inOrder(container);
+        }
+        
+        function inOrder(node) {
+            if (node!=null){
+
+                inOrder(node.children[0]);
+                counter++;
+                setTimeout(function () {
+                    node.style.background = "black";
+                },counter*750);
+                inOrder(node.children[1]);
+            }
+        }
+
+        //后序遍历
+        document.getElementById("last").onclick = function () {
+            postOrder(container);
+        }
+
+        function postOrder(node) {
+            if (node!=null){
+
+                postOrder(node.children[0]);
+                postOrder(node.children[1]);
+                counter++;
+                setTimeout(function () {
+                    node.style.background = "black";
+
+                },counter*500);
+            }
+        }
+
+    </script>
+</body>
+</html>
